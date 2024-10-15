@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K8' Collection - Home</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="K8.png" alt="logo K8">
+        </div>
+        <div class="header-text">
+            <h1>K8' COLLECTION</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT (WITH SWIPER) -->
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- WELCOME SECTION -->
+                <div class="swiper-slide">
+                    <h2 style="font-size: 36px;">Wellcome</h2>
+                    <p style="font-size: 24px;">Halo semua, ini gw, K8, selamat datang di koleksi karya custom gw yang keren-keren. Swipe otomatis buat liat lebih lanjut!</p>
+                </div>
+
+                <!-- STEP BY STEP SECTION -->
+                <div class="swiper-slide">
+                    <h2>Step by Step Custom Process</h2>
+                    <ol>
+                        <li>Step 1: Pilih desain yang lu suka.</li>
+                        <li>Step 2: Konsultasi langsung via DM atau email.</li>
+                        <li>Step 3: Proses desain dimulai sesuai request lu.</li>
+                        <li>Step 4: Revisi sampai puas, kalo ada yang kurang cocok.</li>
+                        <li>Step 5: Selesai! Desain siap dikirim.</li>
+                    </ol>
+                </div>
+
+                <!-- ABOUT SECTION -->
+                <div class="swiper-slide">
+                    <h2>About Me</h2>
+                    <p>Gw K8, designer yang fokus di custom karya seni sesuai pesenan. Check out my portfolio di Gallery!</p>
+                </div>
+
+                <!-- GALLERY SECTION -->
+                <div class="swiper-slide">
+                    <h2>Gallery</h2>
+                    <p>Explore hasil karya gw di bagian Gallery. Klik buat liat detailnya lebih lanjut!</p>
+                </div>
+            </div>
+
+            <!-- Pagination (Optional) -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>Instagram: <a href="https://www.instagram.com/xeco.bgb">xeco.bgb</a></p>
+            <p>Email: zell.stor3@gmail.com</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Activation -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000, // Slide otomatis setiap 3 detik
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    </script>
+</body>
+</html>
