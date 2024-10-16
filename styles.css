@@ -13,6 +13,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /* Biar adaptif, ukurannya medium */
+    margin: 0;
+    padding: 0;
 }
 
 /* FONT IMPORT */
@@ -76,17 +78,19 @@ main {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    gap: 10px;
 }
 
 .gallery-item {
     flex: 0 0 auto;
-    margin: 10px;
     scroll-snap-align: start;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
 .gallery-item img {
     max-width: 300px;
+    width: 100%;
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
@@ -168,14 +172,55 @@ footer a {
     cursor: pointer;
 }
 
-/* SWIPE LOGIC */
+/* RESPONSIVE STYLES */
+
+/* For tablets or smaller screens */
+@media (max-width: 1024px) {
+    .header-text h1 {
+        font-size: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .gallery-item img {
+        max-width: 250px;
+    }
+}
+
+/* For mobile devices */
 @media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 40px;
+    }
+
     .gallery-container {
-        justify-content: center;
         flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .gallery-item {
+        flex: 0 0 85%;
     }
 
     .gallery-item img {
         max-width: 90vw;
     }
-}
+
+    .bubble {
+        padding: 10px;
+    }
+
+    .bubble p {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
